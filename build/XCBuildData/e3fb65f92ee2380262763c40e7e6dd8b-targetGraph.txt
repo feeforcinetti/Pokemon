@@ -1,0 +1,5 @@
+Target dependency graph (3 targets)
+Pods-Pokemon in Pods
+Pods-Pokemon-PokemonUITests in Pods
+Pods-PokemonTests in Pods, depends on:
+Pods-Pokemon in Pods (explicit)
