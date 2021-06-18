@@ -6,6 +6,7 @@ target 'Pokemon' do
   use_frameworks!
 
   # Pods for Pokemon
+  pod 'WMSegmentControl'
 
   target 'PokemonTests' do
     inherit! :search_paths

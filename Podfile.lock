@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 18d33cd34d3a6a3e5ea76a2751a72512c883bbaf
+PODS:
+  - WMSegmentControl (2.2)
+
+DEPENDENCIES:
+  - WMSegmentControl
+
+SPEC REPOS:
+  trunk:
+    - WMSegmentControl
+
+SPEC CHECKSUMS:
+  WMSegmentControl: 4bb3a61e28cd0a0fcfcf932bec1f5795835b9f3f
+
+PODFILE CHECKSUM: 620b1d96812d11d7024787ad4f95c0ba88a1719b
 
 COCOAPODS: 1.10.1
