@@ -19,8 +19,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var circleView: UIImageView!
     @IBOutlet weak var pokeballCircleView: UIImageView!
     @IBOutlet weak var ballIcon: UIImageView!
-    
-    
    //MARK: - IBActions
     
     @IBAction func loginButton(_ sender: Any) {
