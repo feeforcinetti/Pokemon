@@ -46,6 +46,7 @@ open class WMSegment: UIControl {
             layer.cornerRadius = cornerRadius
         }
     }
+    
     @IBInspectable
     public var buttonTitles: String = ""{
         didSet {

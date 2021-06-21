@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		718BDF32265EC6B7001568E3 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BDF31265EC6B7001568E3 /* Screen.swift */; };
 		71913833265737BA0013D7D2 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71913832265737BA0013D7D2 /* LoginButton.swift */; };
 		71913835265744180013D7D2 /* UiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71913834265744180013D7D2 /* UiView.swift */; };
+		71BB31662680DE1500566D8E /* DetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BB31652680DE1500566D8E /* DetailsController.swift */; };
 		71BE6306265436CE009ED8F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BE6305265436CE009ED8F6 /* AppDelegate.swift */; };
 		71BE6308265436CE009ED8F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BE6307265436CE009ED8F6 /* SceneDelegate.swift */; };
 		71BE630A265436CE009ED8F6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BE6309265436CE009ED8F6 /* LoginViewController.swift */; };
@@ -57,6 +58,7 @@
 		718BDF31265EC6B7001568E3 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		71913832265737BA0013D7D2 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		71913834265744180013D7D2 /* UiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiView.swift; sourceTree = "<group>"; };
+		71BB31652680DE1500566D8E /* DetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailsController.swift; path = Pokemon/Controller/DetailsController.swift; sourceTree = SOURCE_ROOT; };
 		71BE6302265436CE009ED8F6 /* Pokemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71BE6305265436CE009ED8F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71BE6307265436CE009ED8F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		71BE63352654371A009ED8F6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				71BB31652680DE1500566D8E /* DetailsController.swift */,
 				71BE6309265436CE009ED8F6 /* LoginViewController.swift */,
 				71913832265737BA0013D7D2 /* LoginButton.swift */,
 				711C61AB26681DE000D880F4 /* PokedexViewController.swift */,
@@ -459,6 +462,7 @@
 				711AE85A2662F62B008FB7EC /* UIColor.swift in Sources */,
 				711C61A926681B0000D880F4 /* PokemonCollectionViewCell.swift in Sources */,
 				71913833265737BA0013D7D2 /* LoginButton.swift in Sources */,
+				71BB31662680DE1500566D8E /* DetailsController.swift in Sources */,
 				71BE6306265436CE009ED8F6 /* AppDelegate.swift in Sources */,
 				71BE6308265436CE009ED8F6 /* SceneDelegate.swift in Sources */,
 				711C61AC26681DE000D880F4 /* PokedexViewController.swift in Sources */,
