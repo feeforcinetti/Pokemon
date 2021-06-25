@@ -51,7 +51,5 @@ class DetailsController: UIViewController {
             weaknessesView.isHidden = false
         }
     }
-
-    
 }
 
