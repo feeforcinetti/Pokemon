@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zb3-x5-8OU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6bu-MC-GgG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -112,7 +112,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fEU-bR-v7n">
                                 <rect key="frame" x="23" y="252" width="368" height="610"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="8" minimumInteritemSpacing="8" id="tiP-FS-a0P">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="tiP-FS-a0P">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -158,7 +158,7 @@
                             <constraint firstItem="CLL-pw-LvL" firstAttribute="leading" secondItem="czI-Qh-ZTD" secondAttribute="leading" constant="23" id="7kS-V6-AMI"/>
                             <constraint firstItem="IIN-bY-9IH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GH9-xH-MhQ" secondAttribute="trailing" constant="8" symbolic="YES" id="R7h-KL-LCX"/>
                             <constraint firstItem="fEU-bR-v7n" firstAttribute="bottom" secondItem="czI-Qh-ZTD" secondAttribute="bottom" id="XVG-uq-Y2p"/>
-                            <constraint firstItem="fEU-bR-v7n" firstAttribute="left" secondItem="VYd-HW-xzS" secondAttribute="left" constant="23" id="Xx9-LV-XwN"/>
+                            <constraint firstItem="fEU-bR-v7n" firstAttribute="left" secondItem="czI-Qh-ZTD" secondAttribute="left" constant="23" id="Xx9-LV-XwN"/>
                             <constraint firstItem="GH9-xH-MhQ" firstAttribute="top" secondItem="CLL-pw-LvL" secondAttribute="bottom" constant="16" id="b26-x9-WF3"/>
                             <constraint firstItem="fEU-bR-v7n" firstAttribute="top" secondItem="GH9-xH-MhQ" secondAttribute="bottom" constant="80" id="bnv-W7-duk"/>
                             <constraint firstItem="IIN-bY-9IH" firstAttribute="top" secondItem="VYd-HW-xzS" secondAttribute="top" constant="-45" id="byM-7h-fG9"/>

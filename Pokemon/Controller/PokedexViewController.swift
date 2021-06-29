@@ -30,7 +30,7 @@ class PokedexViewController: UIViewController {
         collectionView.dataSource = self
         
         if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
-        flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+			flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         }
     }
 }
@@ -54,9 +54,3 @@ extension PokedexViewController: UICollectionViewDataSource{
         return cell
     }
 }
-extension PokedexViewController: UICollectionViewDelegateFlowLayout{
-}
-
-
-
-

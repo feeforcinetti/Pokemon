@@ -17,6 +17,9 @@ class PokemonCollectionViewCell: UICollectionViewCell {
    
     override func awakeFromNib() {
         super.awakeFromNib()
+		
+		contentView.translatesAutoresizingMaskIntoConstraints = false
+		contentView.widthAnchor.constraint(equalToConstant: (UIScreen.main.bounds.size.width - 54) / 2).isActive = true
     }
 
     static func nib() -> UINib {
