@@ -15,6 +15,7 @@ class DetailsController: UIViewController {
     @IBOutlet weak var aboutView: UIView!
     @IBOutlet weak var evolutionsView: UIView!
     @IBOutlet weak var weaknessesView: UIView!
+    @IBOutlet weak var EvolutionTableView: UITableView!
     //variaveis
     
     
@@ -22,8 +23,9 @@ class DetailsController: UIViewController {
     
     override func viewDidLoad() {
         setupSegmented()
+        setupTableViewEvolution()
+        EvolutionTableView.register(EvolutionTableViewCell.nib(), forCellReuseIdentifier: EvolutionTableViewCell.identifier)
     }
-    
     // funcoes proprias
     
     func setupSegmented() {
@@ -36,7 +38,7 @@ class DetailsController: UIViewController {
     
     //ibaction
   
-    @IBAction func detailsPokemon(_ sender: WMSegment) {
+        @IBAction func detailsPokemon(_ sender: WMSegment) {
         if sender.selectedSegmentIndex == 0 {
             aboutView.isHidden = false
             evolutionsView.isHidden = true
@@ -52,4 +54,5 @@ class DetailsController: UIViewController {
         }
     }
 }
+
 

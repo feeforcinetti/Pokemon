@@ -11,9 +11,12 @@
 		711C61A926681B0000D880F4 /* PokemonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711C61A726681B0000D880F4 /* PokemonCollectionViewCell.swift */; };
 		711C61AA26681B0000D880F4 /* PokemonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 711C61A826681B0000D880F4 /* PokemonCollectionViewCell.xib */; };
 		711C61AC26681DE000D880F4 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711C61AB26681DE000D880F4 /* PokedexViewController.swift */; };
+		717D3824268B9F6600848163 /* EvolutionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717D3822268B9F6600848163 /* EvolutionTableViewCell.swift */; };
+		717D3825268B9F6600848163 /* EvolutionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 717D3823268B9F6600848163 /* EvolutionTableViewCell.xib */; };
 		718BDF32265EC6B7001568E3 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BDF31265EC6B7001568E3 /* Screen.swift */; };
 		71913833265737BA0013D7D2 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71913832265737BA0013D7D2 /* LoginButton.swift */; };
 		71913835265744180013D7D2 /* UiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71913834265744180013D7D2 /* UiView.swift */; };
+		71B772E1268F62D100F6E4A3 /* EvolutionDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B772E0268F62D100F6E4A3 /* EvolutionDetailController.swift */; };
 		71BB31662680DE1500566D8E /* DetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BB31652680DE1500566D8E /* DetailsController.swift */; };
 		71BE6306265436CE009ED8F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BE6305265436CE009ED8F6 /* AppDelegate.swift */; };
 		71BE6308265436CE009ED8F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BE6307265436CE009ED8F6 /* SceneDelegate.swift */; };
@@ -55,9 +58,12 @@
 		711C61A726681B0000D880F4 /* PokemonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCollectionViewCell.swift; sourceTree = "<group>"; };
 		711C61A826681B0000D880F4 /* PokemonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonCollectionViewCell.xib; sourceTree = "<group>"; };
 		711C61AB26681DE000D880F4 /* PokedexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
+		717D3822268B9F6600848163 /* EvolutionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvolutionTableViewCell.swift; sourceTree = "<group>"; };
+		717D3823268B9F6600848163 /* EvolutionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EvolutionTableViewCell.xib; sourceTree = "<group>"; };
 		718BDF31265EC6B7001568E3 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		71913832265737BA0013D7D2 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		71913834265744180013D7D2 /* UiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiView.swift; sourceTree = "<group>"; };
+		71B772E0268F62D100F6E4A3 /* EvolutionDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvolutionDetailController.swift; sourceTree = "<group>"; };
 		71BB31652680DE1500566D8E /* DetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailsController.swift; path = Pokemon/Controller/DetailsController.swift; sourceTree = SOURCE_ROOT; };
 		71BE6302265436CE009ED8F6 /* Pokemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71BE6305265436CE009ED8F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,11 +172,13 @@
 		71BE63352654371A009ED8F6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				71BB31652680DE1500566D8E /* DetailsController.swift */,
 				71BE6309265436CE009ED8F6 /* LoginViewController.swift */,
 				71913832265737BA0013D7D2 /* LoginButton.swift */,
 				711C61AB26681DE000D880F4 /* PokedexViewController.swift */,
 				711C61A726681B0000D880F4 /* PokemonCollectionViewCell.swift */,
+				71BB31652680DE1500566D8E /* DetailsController.swift */,
+				717D3822268B9F6600848163 /* EvolutionTableViewCell.swift */,
+				71B772E0268F62D100F6E4A3 /* EvolutionDetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -179,8 +187,9 @@
 			isa = PBXGroup;
 			children = (
 				71BE630B265436CE009ED8F6 /* Main.storyboard */,
-				711C61A826681B0000D880F4 /* PokemonCollectionViewCell.xib */,
 				71BE6310265436CF009ED8F6 /* LaunchScreen.storyboard */,
+				711C61A826681B0000D880F4 /* PokemonCollectionViewCell.xib */,
+				717D3823268B9F6600848163 /* EvolutionTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -328,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71BE6312265436CF009ED8F6 /* LaunchScreen.storyboard in Resources */,
+				717D3825268B9F6600848163 /* EvolutionTableViewCell.xib in Resources */,
 				71BE630F265436CF009ED8F6 /* Assets.xcassets in Resources */,
 				711C61AA26681B0000D880F4 /* PokemonCollectionViewCell.xib in Resources */,
 				71BE630D265436CE009ED8F6 /* Main.storyboard in Resources */,
@@ -465,8 +475,10 @@
 				71BB31662680DE1500566D8E /* DetailsController.swift in Sources */,
 				71BE6306265436CE009ED8F6 /* AppDelegate.swift in Sources */,
 				71BE6308265436CE009ED8F6 /* SceneDelegate.swift in Sources */,
+				717D3824268B9F6600848163 /* EvolutionTableViewCell.swift in Sources */,
 				711C61AC26681DE000D880F4 /* PokedexViewController.swift in Sources */,
 				71E371E5266BCE630020AD4E /* Pokemon.swift in Sources */,
+				71B772E1268F62D100F6E4A3 /* EvolutionDetailController.swift in Sources */,
 				71913835265744180013D7D2 /* UiView.swift in Sources */,
 				718BDF32265EC6B7001568E3 /* Screen.swift in Sources */,
 			);
