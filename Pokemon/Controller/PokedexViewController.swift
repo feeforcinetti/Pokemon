@@ -11,6 +11,11 @@ class PokedexViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    //MARK: - IBActions
+    
+    @IBAction func backLoginEvolution(segue: UIStoryboardSegue) {
+    }
+    
     var customPokemons: [Pokemon] = [Pokemon(pokeBack: green3 , pokeNumber: "#001", pokeName: "Bulbassaruo", types: ["Grass", "Poison", ""], typeColors: [green4, green4, green4], pokeImage: UIImage(named: "001")),
                                      Pokemon(pokeBack: green3, pokeNumber: "#002", pokeName: "Ivyssauro", types: ["Grass", "Poison", "" ], typeColors: [green4, green4, green4], pokeImage: UIImage(named: "002")),
                                      Pokemon(pokeBack: green3, pokeNumber: "#003", pokeName: "Venossauro", types: ["Grass", "Poison", ""], typeColors:[ green4, green4, green4], pokeImage: UIImage(named: "003")),
@@ -38,6 +43,12 @@ class PokedexViewController: UIViewController {
 extension PokedexViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+        
+        if let viewController = storyboard?.instantiateViewController(identifier: "DetailViewController") as? DetailsController {
+            viewController.pokemonSelected = customPokemons[indexPath.row]
+            viewController.modalPresentationStyle = .overFullScreen
+            self.present(viewController, animated: true, completion: nil)
+        }
     }
 }
 

@@ -16,8 +16,10 @@ class DetailsController: UIViewController {
     @IBOutlet weak var evolutionsView: UIView!
     @IBOutlet weak var weaknessesView: UIView!
     @IBOutlet weak var EvolutionTableView: UITableView!
+
     //variaveis
     
+    var pokemonSelected: Pokemon?
     
     //funcoes de ciclo de vida
     
@@ -39,20 +41,21 @@ class DetailsController: UIViewController {
     //ibaction
   
         @IBAction func detailsPokemon(_ sender: WMSegment) {
-        if sender.selectedSegmentIndex == 0 {
-            aboutView.isHidden = false
-            evolutionsView.isHidden = true
-            weaknessesView.isHidden = true
-        }else if sender.selectedSegmentIndex == 1{
-            aboutView.isHidden = true
-            evolutionsView.isHidden = false
-            weaknessesView.isHidden = true
-        }else {
-            aboutView.isHidden = true
-            evolutionsView.isHidden = true
-            weaknessesView.isHidden = false
+            if sender.selectedSegmentIndex == 0 {
+                aboutView.isHidden = false
+                evolutionsView.isHidden = true
+                weaknessesView.isHidden = true
+            }else if sender.selectedSegmentIndex == 1{
+                aboutView.isHidden = true
+                evolutionsView.isHidden = false
+                weaknessesView.isHidden = true
+            }else {
+                aboutView.isHidden = true
+                evolutionsView.isHidden = true
+                weaknessesView.isHidden = false
+            }
         }
-    }
+
 }
 
 

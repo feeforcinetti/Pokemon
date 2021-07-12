@@ -25,6 +25,9 @@ class LoginViewController: UIViewController {
         
     }
     
+    @IBAction func backLogin(segue: UIStoryboardSegue) {
+    }
+    
     //MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,8 +61,7 @@ class LoginViewController: UIViewController {
         changeScreen(with: customizeScreen[indexRandomico()])
     }
     
-    @IBAction func backLogin(segue: UIStoryboardSegue) {
-    }
+    
 }
     
 

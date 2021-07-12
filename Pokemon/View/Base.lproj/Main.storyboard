@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zb3-x5-8OU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -181,7 +181,7 @@
         <!--Details Controller-->
         <scene sceneID="mgj-xk-ZnG">
             <objects>
-                <viewController id="Zb3-x5-8OU" customClass="DetailsController" customModule="Pokemon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="Zb3-x5-8OU" customClass="DetailsController" customModule="Pokemon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RLR-I8-E5Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -467,6 +467,9 @@
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button" image="130-1304091_clipart-arrows-free-download"/>
+                                <connections>
+                                    <segue destination="kPt-VK-JIC" kind="unwind" unwindAction="backLoginEvolutionWithSegue:" id="d9y-9M-iuW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2Gw-Ys-6Oo"/>
@@ -499,6 +502,7 @@
                             <constraint firstItem="jm7-vx-RdN" firstAttribute="top" secondItem="2Gw-Ys-6Oo" secondAttribute="top" constant="93" id="vDj-hY-lYe"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="sh8-4V-Srb"/>
                     <connections>
                         <outlet property="EvolutionTableView" destination="mZO-Iy-sab" id="TON-mp-qC0"/>
                         <outlet property="aboutView" destination="QHe-BG-xl8" id="mPF-cL-imC"/>
@@ -508,8 +512,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgY-yW-No7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="kPt-VK-JIC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2601.449275362319" y="76.339285714285708"/>
+            <point key="canvasLocation" x="2468" y="76"/>
         </scene>
     </scenes>
     <designables>
