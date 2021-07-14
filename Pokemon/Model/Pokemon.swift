@@ -18,8 +18,8 @@ struct Pokemon {
 }
 
 struct Evolution {
-    var types: String
+    var types: [String]
     var name: String
-    var typeColor: UIColor
+    var typeColor: [UIColor]
     var image: UIImage
 }

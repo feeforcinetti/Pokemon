@@ -44,6 +44,7 @@ extension PokedexViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
+        //Passa dados de uma tela para outra
         if let viewController = storyboard?.instantiateViewController(identifier: "DetailViewController") as? DetailsController {
             viewController.pokemonSelected = customPokemons[indexPath.row]
             viewController.modalPresentationStyle = .overFullScreen

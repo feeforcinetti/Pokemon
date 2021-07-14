@@ -176,7 +176,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMy-tC-aZ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ig8-mv-MYg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1731.8840579710147" y="75.669642857142847"/>
+            <point key="canvasLocation" x="1725" y="76"/>
         </scene>
         <!--Details Controller-->
         <scene sceneID="mgj-xk-ZnG">
@@ -418,7 +418,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poison" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0s-ul-Q2f">
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poison" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0s-ul-Q2f">
                                 <rect key="frame" x="88" y="141.5" width="56" height="21"/>
                                 <color key="backgroundColor" red="0.48627450979999998" green="0.86666666670000003" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -440,7 +440,7 @@
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaH-TO-Pdv">
+                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaH-TO-Pdv">
                                 <rect key="frame" x="154" y="141.5" width="56" height="21"/>
                                 <color key="backgroundColor" red="0.48627450979999998" green="0.86666666670000003" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -456,7 +456,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="001" translatesAutoresizingMaskIntoConstraints="NO" id="1K9-gc-kr1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="001" translatesAutoresizingMaskIntoConstraints="NO" id="1K9-gc-kr1">
                                 <rect key="frame" x="22" y="187" width="370" height="215"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Cr-Np-Qdo">
@@ -506,15 +506,22 @@
                     <connections>
                         <outlet property="EvolutionTableView" destination="mZO-Iy-sab" id="TON-mp-qC0"/>
                         <outlet property="aboutView" destination="QHe-BG-xl8" id="mPF-cL-imC"/>
+                        <outlet property="background" destination="RLR-I8-E5Q" id="Ap5-95-D2m"/>
                         <outlet property="evolutionsView" destination="YEH-jX-K9f" id="CIu-CZ-5aj"/>
+                        <outlet property="nameLb" destination="1kP-5S-7Rm" id="9U7-dQ-8Hx"/>
+                        <outlet property="numberLb" destination="jm7-vx-RdN" id="QiB-LT-FHN"/>
+                        <outlet property="pokeImage" destination="1K9-gc-kr1" id="d4v-zh-iXj"/>
                         <outlet property="segmentedControl" destination="WJK-3g-F6v" id="DCp-5v-yvP"/>
                         <outlet property="weaknessesView" destination="qnL-FP-WAr" id="KnP-k6-rPT"/>
+                        <outletCollection property="typesLb" destination="YEe-70-CYk" collectionClass="NSMutableArray" id="3gv-0P-gcZ"/>
+                        <outletCollection property="typesLb" destination="C0s-ul-Q2f" collectionClass="NSMutableArray" id="cmB-Na-5ta"/>
+                        <outletCollection property="typesLb" destination="HaH-TO-Pdv" collectionClass="NSMutableArray" id="5Ap-9p-QKi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgY-yW-No7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="kPt-VK-JIC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2468" y="76"/>
+            <point key="canvasLocation" x="2496" y="76"/>
         </scene>
     </scenes>
     <designables>

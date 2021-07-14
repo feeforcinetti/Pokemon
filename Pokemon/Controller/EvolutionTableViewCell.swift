@@ -31,5 +31,10 @@ class EvolutionTableViewCell: UITableViewCell {
         return UINib(nibName: "EvolutionTableViewCell", bundle: nil)
     }
     
+//    func setupTableViewEvolution(_ : Pokemon){
+//        
+//
+//    }
+
     
 }

@@ -9,17 +9,14 @@ import UIKit
 
 extension DetailsController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let EvolutionCell = EvolutionTableView.dequeueReusableCell(withIdentifier: EvolutionTableViewCell.identifier , for: indexPath) as! EvolutionTableViewCell
+        let evolutionCell = EvolutionTableView.dequeueReusableCell(withIdentifier: EvolutionTableViewCell.identifier , for: indexPath) as! EvolutionTableViewCell
         
-        return EvolutionCell
         
-    }
-    
-    func setupTableViewEvolution(){
-    
+        return evolutionCell
+        
     }
 }

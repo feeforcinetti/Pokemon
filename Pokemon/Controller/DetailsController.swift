@@ -10,7 +10,14 @@ import WMSegmentControl
 
 class DetailsController: UIViewController {
     
-    // outlet
+    //MARK: - OutletsVc
+    @IBOutlet weak var nameLb: UILabel!
+    @IBOutlet var typesLb: [UILabel]!
+    @IBOutlet weak var numberLb: UILabel!
+    @IBOutlet weak var pokeImage: UIImageView!
+    @IBOutlet var background: UIView!
+    
+        //MARK: - OutletsXib
     @IBOutlet weak var segmentedControl: WMSegment!
     @IBOutlet weak var aboutView: UIView!
     @IBOutlet weak var evolutionsView: UIView!
@@ -18,15 +25,17 @@ class DetailsController: UIViewController {
     @IBOutlet weak var EvolutionTableView: UITableView!
 
     //variaveis
-    
     var pokemonSelected: Pokemon?
-    
+        
+    var evolutions = Evolution(types: ["Grass", "Poison", ""], name: "Ivissauro", typeColor: [green4, green4, green4], image: UIImage(named: "002")!)
+
     //funcoes de ciclo de vida
     
     override func viewDidLoad() {
         setupSegmented()
-        setupTableViewEvolution()
         EvolutionTableView.register(EvolutionTableViewCell.nib(), forCellReuseIdentifier: EvolutionTableViewCell.identifier)
+        changeScreen()
+        
     }
     // funcoes proprias
     
@@ -55,7 +64,34 @@ class DetailsController: UIViewController {
                 weaknessesView.isHidden = false
             }
         }
+    
+    func changeScreen() {
+        nameLb.text = pokemonSelected?.pokeName
+        numberLb.text = pokemonSelected?.pokeNumber
+        pokeImage.image = pokemonSelected?.pokeImage
+        background.backgroundColor = pokemonSelected?.pokeBack
+        
+        for i in 0 ... (pokemonSelected?.types.count ??  -1) {
+            let typeLabel = typesLb.first { label in
+                label.tag == i
+            }
+            typeLabel?.backgroundColor = pokemonSelected?.typeColors[i]
+            typeLabel?.text = pokemonSelected?.types[i]
+        }
+        hideTypes()
+    }
+    
+    func hideTypes() {
+        for i in 0 ... (typesLb.count - 1) {
+            if (typesLb[i].text == "") {
+                typesLb[i].isHidden = true
+            } else {
+                typesLb[i].isHidden = false
+            }
+        }
+    }
 
+    
 }
 
 
