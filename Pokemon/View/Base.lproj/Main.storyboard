@@ -238,9 +238,9 @@
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEH-jX-K9f" userLabel="EvolutionsContainer">
                                         <rect key="frame" x="0.0" y="89" width="414" height="445"/>
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mZO-Iy-sab">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mZO-Iy-sab">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="445"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <sections/>
                                                 <connections>
                                                     <outlet property="dataSource" destination="Zb3-x5-8OU" id="UwD-Bm-G6Q"/>
                                                     <outlet property="delegate" destination="Zb3-x5-8OU" id="t2c-lR-NFI"/>

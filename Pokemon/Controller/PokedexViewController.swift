@@ -16,7 +16,7 @@ class PokedexViewController: UIViewController {
     @IBAction func backLoginEvolution(segue: UIStoryboardSegue) {
     }
     
-    var customPokemons: [Pokemon] = [Pokemon(pokeBack: green3 , pokeNumber: "#001", pokeName: "Bulbassaruo", types: ["Grass", "Poison", ""], typeColors: [green4, green4, green4], pokeImage: UIImage(named: "001")),
+    var customPokemons: [Pokemon] = [Pokemon(pokeBack: green3 , pokeNumber: "#001", pokeName: "Bulbassaruo", types: ["Grass", "Poison", ""], typeColors: [green4, green4, green4], pokeImage: UIImage(named: "001"), evolution: [Evolution(types: ["Grass", "Poison", ""], name: "Ivissauro", typeColor: [green4, green4, green4], image: UIImage(named: "002")!), Evolution(types: ["Grass", "Poison", ""], name: "Venossauro", typeColor: [green4, green4, green4], image: UIImage(named: "003")!)]),
                                      Pokemon(pokeBack: green3, pokeNumber: "#002", pokeName: "Ivyssauro", types: ["Grass", "Poison", "" ], typeColors: [green4, green4, green4], pokeImage: UIImage(named: "002")),
                                      Pokemon(pokeBack: green3, pokeNumber: "#003", pokeName: "Venossauro", types: ["Grass", "Poison", ""], typeColors:[ green4, green4, green4], pokeImage: UIImage(named: "003")),
                         Pokemon(pokeBack: orange3, pokeNumber: "#004", pokeName: "Charmander", types: ["Fire", "", ""], typeColors: [orange4, orange4, orange4], pokeImage: UIImage(named: "004")),

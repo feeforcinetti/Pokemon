@@ -26,8 +26,6 @@ class DetailsController: UIViewController {
 
     //variaveis
     var pokemonSelected: Pokemon?
-        
-    var evolutions = Evolution(types: ["Grass", "Poison", ""], name: "Ivissauro", typeColor: [green4, green4, green4], image: UIImage(named: "002")!)
 
     //funcoes de ciclo de vida
     
@@ -35,7 +33,6 @@ class DetailsController: UIViewController {
         setupSegmented()
         EvolutionTableView.register(EvolutionTableViewCell.nib(), forCellReuseIdentifier: EvolutionTableViewCell.identifier)
         changeScreen()
-        
     }
     // funcoes proprias
     
@@ -71,7 +68,10 @@ class DetailsController: UIViewController {
         pokeImage.image = pokemonSelected?.pokeImage
         background.backgroundColor = pokemonSelected?.pokeBack
         
-        for i in 0 ... (pokemonSelected?.types.count ??  -1) {
+        guard let pokemon = pokemonSelected else {
+            return
+        }
+        for i in 0 ... (pokemon.types.count - 1) {
             let typeLabel = typesLb.first { label in
                 label.tag == i
             }

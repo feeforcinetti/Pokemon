@@ -15,6 +15,7 @@ struct Pokemon {
     var typeColors: [UIColor]
     var pokeImage: UIImage?
     var evolution: [Evolution] = []
+    var about: About? = nil
 }
 
 struct Evolution {
@@ -22,4 +23,9 @@ struct Evolution {
     var name: String
     var typeColor: [UIColor]
     var image: UIImage
+}
+
+struct About {
+    var height: String?
+    var weight: String?
 }

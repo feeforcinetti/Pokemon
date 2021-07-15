@@ -14,6 +14,8 @@ class EvolutionTableViewCell: UITableViewCell {
     @IBOutlet var TipsPower: [UILabel]!
     @IBOutlet weak var viewSpace: UIView!
     
+    var evolution: Evolution?
+    
     static let identifier = "EvolutionTableViewCell"
     
     override func awakeFromNib() {
@@ -31,10 +33,28 @@ class EvolutionTableViewCell: UITableViewCell {
         return UINib(nibName: "EvolutionTableViewCell", bundle: nil)
     }
     
-//    func setupTableViewEvolution(_ : Pokemon){
-//        
-//
-//    }
+    func setupTableViewEvolution(){
+        pokemonImg.image = evolution?.image
+        pokemonNameLbl.text = evolution?.name
+        
+        for i in 0 ... (TipsPower.count - 1) {
+            let type = TipsPower.first { label in label.tag == i
+            }
+            type?.backgroundColor = evolution?.typeColor[i]
+            type?.text = evolution?.types[i]
+        }
+        hideTypsEvolution()
+    }
+    
+    func hideTypsEvolution() {
+        for i in 0 ... (TipsPower.count - 1) {
+            if (TipsPower[i].text == "") {
+                TipsPower[i].isHidden = true
+            } else {
+                TipsPower[i].isHidden = false 
+            }
+        }
+    }
 
     
 }
