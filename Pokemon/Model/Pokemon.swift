@@ -22,7 +22,7 @@ struct Evolution {
     var types: [String]
     var name: String
     var typeColor: [UIColor]
-    var image: UIImage
+    var image: UIImage?
 }
 
 struct About {

@@ -228,7 +228,7 @@
                                         </connections>
                                     </view>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qnL-FP-WAr" userLabel="WeakenessesContainer">
-                                        <rect key="frame" x="0.0" y="89" width="414" height="445"/>
+                                        <rect key="frame" x="0.0" y="82" width="414" height="452"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="30"/>
@@ -236,10 +236,11 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEH-jX-K9f" userLabel="EvolutionsContainer">
-                                        <rect key="frame" x="0.0" y="89" width="414" height="445"/>
+                                        <rect key="frame" x="0.0" y="82" width="414" height="452"/>
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mZO-Iy-sab">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="445"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mZO-Iy-sab">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="452"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <sections/>
                                                 <connections>
                                                     <outlet property="dataSource" destination="Zb3-x5-8OU" id="UwD-Bm-G6Q"/>
@@ -260,7 +261,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QHe-BG-xl8" userLabel="aboutContainer">
-                                        <rect key="frame" x="0.0" y="89" width="414" height="445"/>
+                                        <rect key="frame" x="0.0" y="82" width="414" height="452"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is a plant seed on its back right from the day this Pokemon is born. The seed slowly grows larger." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNE-yJ-rQJ">
                                                 <rect key="frame" x="22" y="15" width="370" height="56"/>
@@ -375,9 +376,9 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="QHe-BG-xl8" secondAttribute="bottom" id="8aF-Ub-65b"/>
                                     <constraint firstItem="qnL-FP-WAr" firstAttribute="bottom" secondItem="QHe-BG-xl8" secondAttribute="bottom" id="C69-VX-8Tx"/>
-                                    <constraint firstItem="mZO-Iy-sab" firstAttribute="top" secondItem="WJK-3g-F6v" secondAttribute="bottom" constant="8" symbolic="YES" id="Fcz-2W-pnC"/>
+                                    <constraint firstItem="mZO-Iy-sab" firstAttribute="top" secondItem="WJK-3g-F6v" secondAttribute="bottom" constant="1" id="Fcz-2W-pnC"/>
                                     <constraint firstItem="qnL-FP-WAr" firstAttribute="trailing" secondItem="QHe-BG-xl8" secondAttribute="trailing" id="Lpo-E3-LqN"/>
-                                    <constraint firstItem="QHe-BG-xl8" firstAttribute="top" secondItem="WJK-3g-F6v" secondAttribute="bottom" constant="8" symbolic="YES" id="U9S-uC-k1x"/>
+                                    <constraint firstItem="QHe-BG-xl8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WJK-3g-F6v" secondAttribute="bottom" id="U9S-uC-k1x"/>
                                     <constraint firstItem="QHe-BG-xl8" firstAttribute="leading" secondItem="pNH-b8-GrX" secondAttribute="leading" id="UCD-iG-OO6"/>
                                     <constraint firstAttribute="trailing" secondItem="QHe-BG-xl8" secondAttribute="trailing" id="WVq-5x-hhp"/>
                                     <constraint firstItem="WJK-3g-F6v" firstAttribute="leading" secondItem="pNH-b8-GrX" secondAttribute="leading" constant="22" id="XNk-Po-hMH"/>
