@@ -506,14 +506,20 @@
                     <navigationItem key="navigationItem" id="sh8-4V-Srb"/>
                     <connections>
                         <outlet property="EvolutionTableView" destination="mZO-Iy-sab" id="TON-mp-qC0"/>
+                        <outlet property="abilitiesLb" destination="oFA-NJ-yjc" id="dch-uk-vtu"/>
                         <outlet property="aboutView" destination="QHe-BG-xl8" id="mPF-cL-imC"/>
                         <outlet property="background" destination="RLR-I8-E5Q" id="Ap5-95-D2m"/>
+                        <outlet property="categoryLb" destination="J68-V3-iTW" id="Jlb-h8-ZGL"/>
+                        <outlet property="descriptionLb" destination="CNE-yJ-rQJ" id="P87-Rs-MHq"/>
                         <outlet property="evolutionsView" destination="YEH-jX-K9f" id="CIu-CZ-5aj"/>
+                        <outlet property="genderLb" destination="Z3H-mF-g1I" id="ibt-kK-Oha"/>
+                        <outlet property="heightLb" destination="uPY-vy-boU" id="Mmc-QO-3Rk"/>
                         <outlet property="nameLb" destination="1kP-5S-7Rm" id="9U7-dQ-8Hx"/>
                         <outlet property="numberLb" destination="jm7-vx-RdN" id="QiB-LT-FHN"/>
                         <outlet property="pokeImage" destination="1K9-gc-kr1" id="d4v-zh-iXj"/>
                         <outlet property="segmentedControl" destination="WJK-3g-F6v" id="DCp-5v-yvP"/>
                         <outlet property="weaknessesView" destination="qnL-FP-WAr" id="KnP-k6-rPT"/>
+                        <outlet property="weightLb" destination="LXD-EN-3P2" id="0sZ-RE-qzD"/>
                         <outletCollection property="typesLb" destination="YEe-70-CYk" collectionClass="NSMutableArray" id="3gv-0P-gcZ"/>
                         <outletCollection property="typesLb" destination="C0s-ul-Q2f" collectionClass="NSMutableArray" id="cmB-Na-5ta"/>
                         <outletCollection property="typesLb" destination="HaH-TO-Pdv" collectionClass="NSMutableArray" id="5Ap-9p-QKi"/>

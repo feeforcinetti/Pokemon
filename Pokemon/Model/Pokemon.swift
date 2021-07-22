@@ -28,4 +28,8 @@ struct Evolution {
 struct About {
     var height: String?
     var weight: String?
+    var gender: String?
+    var category: String?
+    var Abilities: String?
+    var description: String?
 }

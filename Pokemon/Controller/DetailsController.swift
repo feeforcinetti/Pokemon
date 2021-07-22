@@ -10,19 +10,28 @@ import WMSegmentControl
 
 class DetailsController: UIViewController {
     
-    //MARK: - OutletsVc
+    // MARK: - OutletsVc
     @IBOutlet weak var nameLb: UILabel!
     @IBOutlet var typesLb: [UILabel]!
     @IBOutlet weak var numberLb: UILabel!
     @IBOutlet weak var pokeImage: UIImageView!
     @IBOutlet var background: UIView!
     
-        //MARK: - OutletsXib
+        // MARK: - OutletsXib
     @IBOutlet weak var segmentedControl: WMSegment!
     @IBOutlet weak var aboutView: UIView!
     @IBOutlet weak var evolutionsView: UIView!
     @IBOutlet weak var weaknessesView: UIView!
     @IBOutlet weak var EvolutionTableView: UITableView!
+    
+    // MARK: OutletsAboutView
+    @IBOutlet weak var heightLb: UILabel!
+    @IBOutlet weak var weightLb: UILabel!
+    @IBOutlet weak var genderLb: UILabel!
+    @IBOutlet weak var categoryLb: UILabel!
+    @IBOutlet weak var abilitiesLb: UILabel!
+    @IBOutlet weak var descriptionLb: UILabel!
+    
 
     //variaveis
     var pokemonSelected: Pokemon?
@@ -33,6 +42,7 @@ class DetailsController: UIViewController {
         setupSegmented()
         EvolutionTableView.register(EvolutionTableViewCell.nib(), forCellReuseIdentifier: EvolutionTableViewCell.identifier)
         changeScreen()
+        changeAboutInfo(pokemonSelected)
     }
     // funcoes proprias
     
@@ -91,7 +101,14 @@ class DetailsController: UIViewController {
         }
     }
 
-    
+    func changeAboutInfo(_ : Pokemon?){
+        heightLb.text = pokemonSelected?.about?.height
+        weightLb.text = pokemonSelected?.about?.weight
+        genderLb.text = pokemonSelected?.about?.gender
+        categoryLb.text = pokemonSelected?.about?.category
+        abilitiesLb.text = pokemonSelected?.about?.Abilities
+        descriptionLb.text = pokemonSelected?.about?.description
+    }
 }
 
 
