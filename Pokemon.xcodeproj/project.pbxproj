@@ -194,8 +194,8 @@
 		71BE633626543726009ED8F6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				71BE630B265436CE009ED8F6 /* Main.storyboard */,
 				71BE6310265436CF009ED8F6 /* LaunchScreen.storyboard */,
+				71BE630B265436CE009ED8F6 /* Main.storyboard */,
 				711C61A826681B0000D880F4 /* PokemonCollectionViewCell.xib */,
 				717D3823268B9F6600848163 /* EvolutionTableViewCell.xib */,
 				713C72D926AA4AAB00A2E5E0 /* WeaknessesCollectionViewCell.xib */,

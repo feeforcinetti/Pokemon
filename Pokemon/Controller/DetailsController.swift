@@ -42,10 +42,14 @@ class DetailsController: UIViewController {
     
     override func viewDidLoad() {
         setupSegmented()
+        weaknessesCollectionView.register(WeaknessesCollectionViewCell.nib(), forCellWithReuseIdentifier: WeaknessesCollectionViewCell.weakIndetifier)
+        if let flowLayout = weaknessesCollectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        }
+        
         EvolutionTableView.register(EvolutionTableViewCell.nib(), forCellReuseIdentifier: EvolutionTableViewCell.identifier)
         changeScreen()
-        changeAboutInfo(pokemonSelected)
-        weaknessesCollectionView.register(WeaknessesCollectionViewCell.nib(), forCellWithReuseIdentifier: WeaknessesCollectionViewCell.weakIndetifier)
+        changeAboutInfo()
     }
     
     // funcoes proprias
@@ -105,7 +109,7 @@ class DetailsController: UIViewController {
         }
     }
 
-    func changeAboutInfo(_ : Pokemon?){
+    func changeAboutInfo(){
         heightLb.text = pokemonSelected?.about?.height
         weightLb.text = pokemonSelected?.about?.weight
         genderLb.text = pokemonSelected?.about?.gender

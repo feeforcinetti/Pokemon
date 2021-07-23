@@ -16,10 +16,9 @@ extension DetailsController: UICollectionViewDataSource, UICollectionViewDelegat
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WeaknessesCollectionViewCell.weakIndetifier, for: indexPath) as! WeaknessesCollectionViewCell
         
         cell.weaknesses = pokemonSelected?.weaknesses[indexPath.row]
+        cell.changeWeaknessesView()
         
             return cell
     }
-    
-    
-    
+
 }

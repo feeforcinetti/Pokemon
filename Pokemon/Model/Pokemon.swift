@@ -36,5 +36,6 @@ struct About {
 }
 
 struct Weaknesses {
-    var typesWeaknesses: [String]
+    var typesWeaknesses: String
+    var color: UIColor
 }
