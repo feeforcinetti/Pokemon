@@ -227,14 +227,6 @@
                                             <action selector="detailsPokemon:" destination="Zb3-x5-8OU" eventType="valueChanged" id="rUo-U3-opd"/>
                                         </connections>
                                     </view>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qnL-FP-WAr" userLabel="WeakenessesContainer">
-                                        <rect key="frame" x="0.0" y="82" width="414" height="452"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEH-jX-K9f" userLabel="EvolutionsContainer">
                                         <rect key="frame" x="0.0" y="82" width="414" height="452"/>
                                         <subviews>
@@ -260,7 +252,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QHe-BG-xl8" userLabel="aboutContainer">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QHe-BG-xl8" userLabel="aboutContainer">
                                         <rect key="frame" x="0.0" y="82" width="414" height="452"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is a plant seed on its back right from the day this Pokemon is born. The seed slowly grows larger." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNE-yJ-rQJ">
@@ -364,6 +356,38 @@
                                             <constraint firstAttribute="trailing" secondItem="CNE-yJ-rQJ" secondAttribute="trailing" constant="22" id="xlr-0g-m2M"/>
                                             <constraint firstItem="LXD-EN-3P2" firstAttribute="leading" secondItem="Z3H-mF-g1I" secondAttribute="leading" id="zJY-Ge-hAh"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Z3H-mF-g1I" secondAttribute="trailing" constant="20" symbolic="YES" id="zcY-GI-X6H"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qnL-FP-WAr" userLabel="WeakenessesContainer">
+                                        <rect key="frame" x="0.0" y="82" width="414" height="452"/>
+                                        <subviews>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JxY-8u-WDN">
+                                                <rect key="frame" x="23" y="0.0" width="368" height="452"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3lS-PR-mqX">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="Zb3-x5-8OU" id="8ml-ND-D5G"/>
+                                                    <outlet property="delegate" destination="Zb3-x5-8OU" id="mk2-go-ghm"/>
+                                                </connections>
+                                            </collectionView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.031372549020000001" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="JxY-8u-WDN" secondAttribute="bottom" id="LUR-53-xBj"/>
+                                            <constraint firstItem="JxY-8u-WDN" firstAttribute="top" secondItem="qnL-FP-WAr" secondAttribute="top" id="WFJ-XD-nye"/>
+                                            <constraint firstItem="JxY-8u-WDN" firstAttribute="leading" secondItem="qnL-FP-WAr" secondAttribute="leading" constant="23" id="dUb-nd-Zhk"/>
+                                            <constraint firstAttribute="trailing" secondItem="JxY-8u-WDN" secondAttribute="trailing" constant="23" id="kci-ye-Igi"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -506,6 +530,7 @@
                     <navigationItem key="navigationItem" id="sh8-4V-Srb"/>
                     <connections>
                         <outlet property="EvolutionTableView" destination="mZO-Iy-sab" id="TON-mp-qC0"/>
+                        <outlet property="WeaknessesCollectionView" destination="qnL-FP-WAr" id="J8w-Br-Bif"/>
                         <outlet property="abilitiesLb" destination="oFA-NJ-yjc" id="dch-uk-vtu"/>
                         <outlet property="aboutView" destination="QHe-BG-xl8" id="mPF-cL-imC"/>
                         <outlet property="background" destination="RLR-I8-E5Q" id="Ap5-95-D2m"/>
@@ -518,6 +543,7 @@
                         <outlet property="numberLb" destination="jm7-vx-RdN" id="QiB-LT-FHN"/>
                         <outlet property="pokeImage" destination="1K9-gc-kr1" id="d4v-zh-iXj"/>
                         <outlet property="segmentedControl" destination="WJK-3g-F6v" id="DCp-5v-yvP"/>
+                        <outlet property="weaknessesCollectionView" destination="JxY-8u-WDN" id="nfO-ju-WID"/>
                         <outlet property="weaknessesView" destination="qnL-FP-WAr" id="KnP-k6-rPT"/>
                         <outlet property="weightLb" destination="LXD-EN-3P2" id="0sZ-RE-qzD"/>
                         <outletCollection property="typesLb" destination="YEe-70-CYk" collectionClass="NSMutableArray" id="3gv-0P-gcZ"/>
@@ -528,7 +554,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgY-yW-No7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="kPt-VK-JIC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2496" y="76"/>
+            <point key="canvasLocation" x="2494.202898550725" y="75.669642857142847"/>
         </scene>
     </scenes>
     <designables>

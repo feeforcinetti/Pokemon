@@ -16,6 +16,7 @@ struct Pokemon {
     var pokeImage: UIImage?
     var evolution: [Evolution] = []
     var about: About? = nil
+    var weaknesses: [Weaknesses] = []
 }
 
 struct Evolution {
@@ -32,4 +33,8 @@ struct About {
     var category: String?
     var Abilities: String?
     var description: String?
+}
+
+struct Weaknesses {
+    var typesWeaknesses: [String]
 }

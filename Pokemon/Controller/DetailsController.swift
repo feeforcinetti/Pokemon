@@ -32,9 +32,11 @@ class DetailsController: UIViewController {
     @IBOutlet weak var abilitiesLb: UILabel!
     @IBOutlet weak var descriptionLb: UILabel!
     
-
+    @IBOutlet weak var weaknessesCollectionView: UICollectionView!
+    
     //variaveis
     var pokemonSelected: Pokemon?
+    
 
     //funcoes de ciclo de vida
     
@@ -43,7 +45,9 @@ class DetailsController: UIViewController {
         EvolutionTableView.register(EvolutionTableViewCell.nib(), forCellReuseIdentifier: EvolutionTableViewCell.identifier)
         changeScreen()
         changeAboutInfo(pokemonSelected)
+        weaknessesCollectionView.register(WeaknessesCollectionViewCell.nib(), forCellWithReuseIdentifier: WeaknessesCollectionViewCell.weakIndetifier)
     }
+    
     // funcoes proprias
     
     func setupSegmented() {
