@@ -30,14 +30,14 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     func customizeNib(with pokemon: Pokemon) {
         numberLabel.text = pokemon.pokeNumber
         nameLabel.text = pokemon.pokeName
-        pokemonImage.image = pokemon.pokeImage
-        self.backgroundColor = pokemon.pokeBack
+//        pokemonImage.image = pokemon.pokeImage
+//        self.backgroundColor = pokemon.pokeBack
         
         for i in 0 ... (pokemon.types.count - 1) {
             let typeLabel = tipLabels.first { label in
                 label.tag == i
             }
-            typeLabel?.backgroundColor = pokemon.typeColors[i]
+//            typeLabel?.backgroundColor = pokemon.typeColors[i]
             typeLabel?.text = pokemon.types[i]
         }
         hideTypes()

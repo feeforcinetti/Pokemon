@@ -30,8 +30,8 @@ class WeaknessesCollectionViewCell: UICollectionViewCell {
     }
     
     func changeWeaknessesView() {
-        weaknessesLb.text = weaknesses?.typesWeaknesses
-        weaknessesView.backgroundColor = weaknesses?.color
-    }
+//        weaknessesLb.text = weaknesses?.typesWeaknesses
+//        weaknessesView.backgroundColor = weaknesses?.color
+   }
 }
 

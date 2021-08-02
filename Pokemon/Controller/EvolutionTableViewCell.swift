@@ -34,13 +34,13 @@ class EvolutionTableViewCell: UITableViewCell {
     }
     
     func setupTableViewEvolution(){
-        pokemonImg.image = evolution?.image
-        pokemonNameLbl.text = evolution?.name
+////        pokemonImg.image = evolution?.image
+//        pokemonNameLbl.text = evolution?.name
         
         for i in 0 ... (TipsPower.count - 1) {
             let type = TipsPower.first { label in label.tag == i
             }
-            type?.backgroundColor = evolution?.typeColor[i]
+//            type?.backgroundColor = evolution?.typeColor[i]
             type?.text = evolution?.types[i]
         }
         hideTypsEvolution()

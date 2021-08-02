@@ -83,8 +83,8 @@ class DetailsController: UIViewController {
     func changeScreen() {
         nameLb.text = pokemonSelected?.pokeName
         numberLb.text = pokemonSelected?.pokeNumber
-        pokeImage.image = pokemonSelected?.pokeImage
-        background.backgroundColor = pokemonSelected?.pokeBack
+//        pokeImage.image = pokemonSelected?.pokeImage
+//        background.backgroundColor = pokemonSelected?.pokeBack
         
         guard let pokemon = pokemonSelected else {
             return
@@ -93,7 +93,7 @@ class DetailsController: UIViewController {
             let typeLabel = typesLb.first { label in
                 label.tag == i
             }
-            typeLabel?.backgroundColor = pokemonSelected?.typeColors[i]
+//            typeLabel?.backgroundColor = pokemonSelected?.typeColors[i]
             typeLabel?.text = pokemonSelected?.types[i]
         }
         hideTypes()
