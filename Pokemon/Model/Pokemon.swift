@@ -24,9 +24,10 @@ struct Pokemon: Codable {
 
 struct Evolution: Codable {
     var types: [String]
-    var name: String
+    var name: String?
     var typeColor: [String]
     var image: String?
+    var nameURl: String?
 }
 
 struct About: Codable {
@@ -43,25 +44,8 @@ struct Weaknesses: Codable {
     var color: String
 }
 
-struct PokedexModel: Codable {
-    var count : Int
-    var next: String?
-    var previous: String?
-    var results: [PokedexResult] = []
-}
-
-struct PokedexResult: Codable {
-    var name: String?
-    var url: String?
-}
-
 struct PokemonModel: Codable {
     var id: Int?
     var name: String?
     var url: String?
-}
-
-struct serverError {
-    let msgError: String
-    let statusCode: Int
 }
