@@ -27,15 +27,14 @@ class DetailsController: UIViewController {
     // MARK: OutletsAboutView
     @IBOutlet weak var heightLb: UILabel!
     @IBOutlet weak var weightLb: UILabel!
-    @IBOutlet weak var genderLb: UILabel!
-    @IBOutlet weak var categoryLb: UILabel!
+    @IBOutlet weak var movesLb: UILabel!
     @IBOutlet weak var abilitiesLb: UILabel!
     @IBOutlet weak var descriptionLb: UILabel!
     
     @IBOutlet weak var weaknessesCollectionView: UICollectionView!
     
     //variaveis
-    var pokemonSelected: Pokemon?
+    var pokemonSelected: Pokemon1?
     
 
     //funcoes de ciclo de vida
@@ -57,7 +56,7 @@ class DetailsController: UIViewController {
     func setupSegmented() {
         segmentedControl.SelectedFont = UIFont(name: "Helvetica-Bold", size: 17) ?? UIFont.boldSystemFont(ofSize: 17)
         segmentedControl.normalFont = UIFont(name: "Helvetica-Bold", size: 17) ?? UIFont.boldSystemFont(ofSize: 17)
-        segmentedControl.selectorColor   = blueDetails
+        segmentedControl.selectorColor   = water
         segmentedControl.selectorType = .bottomBar
         segmentedControl.bottomBarHeight = 2
     }
@@ -81,8 +80,8 @@ class DetailsController: UIViewController {
         }
     
     func changeScreen() {
-        nameLb.text = pokemonSelected?.pokeName
-        numberLb.text = pokemonSelected?.pokeNumber
+//        nameLb.text = pokemonSelected?.pokeName
+//        numberLb.text = pokemonSelected?.pokeNumber
 //        pokeImage.image = pokemonSelected?.pokeImage
 //        background.backgroundColor = pokemonSelected?.pokeBack
         
@@ -94,7 +93,7 @@ class DetailsController: UIViewController {
                 label.tag == i
             }
 //            typeLabel?.backgroundColor = pokemonSelected?.typeColors[i]
-            typeLabel?.text = pokemonSelected?.types[i]
+//            typeLabel?.text = pokemonSelected?.types[i]
         }
         hideTypes()
     }
@@ -110,12 +109,11 @@ class DetailsController: UIViewController {
     }
 
     func changeAboutInfo(){
-        heightLb.text = pokemonSelected?.about?.height
-        weightLb.text = pokemonSelected?.about?.weight
-        genderLb.text = pokemonSelected?.about?.gender
-        categoryLb.text = pokemonSelected?.about?.category
-        abilitiesLb.text = pokemonSelected?.about?.Abilities
-        descriptionLb.text = pokemonSelected?.about?.description
+//        heightLb.text = pokemonSelected?.about?.height
+//        weightLb.text = pokemonSelected?.about?.weight
+//        movesLb.text = pokemonSelected?.about?.gender
+//        abilitiesLb.text = pokemonSelected?.about?.category
+//        descriptionLb.text = pokemonSelected?.about?.description
     }
 }
 

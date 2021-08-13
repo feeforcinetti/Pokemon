@@ -312,20 +312,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIg-Gn-OhJ">
-                                                <rect key="frame" x="22" y="181" width="56" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moves" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIg-Gn-OhJ">
+                                                <rect key="frame" x="22" y="181" width="51" height="20"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIh-fi-d9R">
-                                                <rect key="frame" x="22" y="220" width="70" height="20"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abilities" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="El1-NC-QZ0">
-                                                <rect key="frame" x="22" y="259" width="82.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abilities" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIh-fi-d9R">
+                                                <rect key="frame" x="22" y="220" width="61" height="20"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -348,12 +342,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overgrow" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFA-NJ-yjc">
-                                                <rect key="frame" x="112.5" y="259.5" width="67.5" height="19"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J68-V3-iTW">
                                                 <rect key="frame" x="112.5" y="220.5" width="36" height="19"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
@@ -364,7 +352,6 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LXD-EN-3P2" secondAttribute="trailing" constant="20" symbolic="YES" id="1Bn-gw-hHc"/>
                                             <constraint firstItem="uPY-vy-boU" firstAttribute="leading" secondItem="LXD-EN-3P2" secondAttribute="leading" id="A2r-ra-2YW"/>
-                                            <constraint firstItem="oFA-NJ-yjc" firstAttribute="leading" secondItem="El1-NC-QZ0" secondAttribute="trailing" constant="8" symbolic="YES" id="BKP-gx-C0E"/>
                                             <constraint firstItem="uPY-vy-boU" firstAttribute="leading" secondItem="95T-3X-kVs" secondAttribute="trailing" constant="40" id="CKf-mO-D3j"/>
                                             <constraint firstItem="J68-V3-iTW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MIh-fi-d9R" secondAttribute="trailing" constant="8" symbolic="YES" id="DAR-5k-Qb7"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uPY-vy-boU" secondAttribute="trailing" constant="20" symbolic="YES" id="DY6-VL-fGT"/>
@@ -372,23 +359,17 @@
                                             <constraint firstItem="CNE-yJ-rQJ" firstAttribute="top" secondItem="QHe-BG-xl8" secondAttribute="top" constant="15" id="JGL-SS-t4M"/>
                                             <constraint firstItem="uPY-vy-boU" firstAttribute="centerY" secondItem="95T-3X-kVs" secondAttribute="centerY" id="K7C-Rh-iiF"/>
                                             <constraint firstItem="CIg-Gn-OhJ" firstAttribute="leading" secondItem="QHe-BG-xl8" secondAttribute="leading" constant="22" id="KYv-pv-DjD"/>
-                                            <constraint firstItem="J68-V3-iTW" firstAttribute="leading" secondItem="oFA-NJ-yjc" secondAttribute="leading" id="Mav-dC-K9o"/>
                                             <constraint firstItem="LXD-EN-3P2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BDb-Pp-taC" secondAttribute="trailing" constant="8" symbolic="YES" id="Mml-cC-aJ1"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="J68-V3-iTW" secondAttribute="trailing" constant="20" symbolic="YES" id="N5N-hh-79G"/>
-                                            <constraint firstItem="El1-NC-QZ0" firstAttribute="top" secondItem="MIh-fi-d9R" secondAttribute="bottom" constant="19" id="N75-HW-erJ"/>
                                             <constraint firstItem="MIh-fi-d9R" firstAttribute="top" secondItem="CIg-Gn-OhJ" secondAttribute="bottom" constant="19" id="SMx-sW-8CR"/>
                                             <constraint firstItem="Z3H-mF-g1I" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CIg-Gn-OhJ" secondAttribute="trailing" constant="8" symbolic="YES" id="Tf4-Uc-gaP"/>
-                                            <constraint firstItem="oFA-NJ-yjc" firstAttribute="centerY" secondItem="El1-NC-QZ0" secondAttribute="centerY" id="Vwn-tv-7zg"/>
                                             <constraint firstItem="LXD-EN-3P2" firstAttribute="centerY" secondItem="BDb-Pp-taC" secondAttribute="centerY" id="Wco-PT-xLm"/>
-                                            <constraint firstItem="El1-NC-QZ0" firstAttribute="leading" secondItem="QHe-BG-xl8" secondAttribute="leading" constant="22" id="Xqs-Rm-WUv"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oFA-NJ-yjc" secondAttribute="trailing" constant="22" id="amb-n7-k6R"/>
                                             <constraint firstItem="BDb-Pp-taC" firstAttribute="top" secondItem="95T-3X-kVs" secondAttribute="bottom" constant="19" id="ea4-kr-W3i"/>
                                             <constraint firstItem="Z3H-mF-g1I" firstAttribute="centerY" secondItem="CIg-Gn-OhJ" secondAttribute="centerY" id="igr-Id-Dlg"/>
                                             <constraint firstItem="MIh-fi-d9R" firstAttribute="leading" secondItem="QHe-BG-xl8" secondAttribute="leading" constant="22" id="jYC-1P-9vm"/>
                                             <constraint firstItem="BDb-Pp-taC" firstAttribute="leading" secondItem="QHe-BG-xl8" secondAttribute="leading" constant="22" id="lTr-Hc-5aX"/>
                                             <constraint firstItem="95T-3X-kVs" firstAttribute="top" secondItem="CNE-yJ-rQJ" secondAttribute="bottom" constant="32" id="n8p-tL-fTc"/>
                                             <constraint firstItem="CNE-yJ-rQJ" firstAttribute="leading" secondItem="QHe-BG-xl8" secondAttribute="leading" constant="22" id="nS7-lJ-K0r"/>
-                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="El1-NC-QZ0" secondAttribute="bottom" constant="22" id="oOO-CG-ztG"/>
                                             <constraint firstItem="J68-V3-iTW" firstAttribute="centerY" secondItem="MIh-fi-d9R" secondAttribute="centerY" id="thu-tt-YiB"/>
                                             <constraint firstItem="95T-3X-kVs" firstAttribute="leading" secondItem="QHe-BG-xl8" secondAttribute="leading" constant="22" id="ufa-oE-prj"/>
                                             <constraint firstItem="Z3H-mF-g1I" firstAttribute="leading" secondItem="J68-V3-iTW" secondAttribute="leading" id="xOV-MG-TJy"/>
@@ -538,14 +519,13 @@
                     <connections>
                         <outlet property="EvolutionTableView" destination="mZO-Iy-sab" id="TON-mp-qC0"/>
                         <outlet property="WeaknessesCollectionView" destination="qnL-FP-WAr" id="J8w-Br-Bif"/>
-                        <outlet property="abilitiesLb" destination="oFA-NJ-yjc" id="dch-uk-vtu"/>
+                        <outlet property="abilitiesLb" destination="J68-V3-iTW" id="Jlb-h8-ZGL"/>
                         <outlet property="aboutView" destination="QHe-BG-xl8" id="mPF-cL-imC"/>
                         <outlet property="background" destination="RLR-I8-E5Q" id="Ap5-95-D2m"/>
-                        <outlet property="categoryLb" destination="J68-V3-iTW" id="Jlb-h8-ZGL"/>
                         <outlet property="descriptionLb" destination="CNE-yJ-rQJ" id="P87-Rs-MHq"/>
                         <outlet property="evolutionsView" destination="YEH-jX-K9f" id="CIu-CZ-5aj"/>
-                        <outlet property="genderLb" destination="Z3H-mF-g1I" id="ibt-kK-Oha"/>
                         <outlet property="heightLb" destination="uPY-vy-boU" id="Mmc-QO-3Rk"/>
+                        <outlet property="movesLb" destination="Z3H-mF-g1I" id="ibt-kK-Oha"/>
                         <outlet property="nameLb" destination="1kP-5S-7Rm" id="9U7-dQ-8Hx"/>
                         <outlet property="numberLb" destination="jm7-vx-RdN" id="QiB-LT-FHN"/>
                         <outlet property="pokeImage" destination="1K9-gc-kr1" id="d4v-zh-iXj"/>

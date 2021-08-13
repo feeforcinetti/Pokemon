@@ -33,7 +33,7 @@ class PokedexViewController: UIViewController {
     func updateCollectionView(_ respostaPkm: [PokemonsResult]) {
         pokemons = respostaPkm
         DispatchQueue.main.async {
-            self.collectionView.reloadData()
+        self.collectionView.reloadData()
         }
     }
 }
@@ -60,11 +60,10 @@ extension PokedexViewController: UICollectionViewDataSource{
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PokemonCollectionViewCell.identifier , for: indexPath) as! PokemonCollectionViewCell
         
-        cell.alterarNome(nome: pokemons[indexPath.row].name ?? "")
         cell.index = indexPath.row
+        cell.setupPokemon(pokemon: pokemons[indexPath.row])
         cell.downloadImage()
-//       cell.customizeNib(with: customPokemons[indexPath.row])
-        
+    
         return cell
     }
     
@@ -90,3 +89,6 @@ extension PokedexViewController: UICollectionViewDataSource{
         task.resume()
     }
 }
+
+
+

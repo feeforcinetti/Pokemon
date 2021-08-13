@@ -8,7 +8,7 @@
 import UIKit
 import Foundation
 
-struct Pokemon: Codable {
+struct Pokemon1: Codable {
     var pokeBack: String
     var pokeNumber: String
     var pokeName: String
@@ -44,8 +44,5 @@ struct Weaknesses: Codable {
     var color: String
 }
 
-struct PokemonModel: Codable {
-    var id: Int?
-    var name: String?
-    var url: String?
-}
+
+
