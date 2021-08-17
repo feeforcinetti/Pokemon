@@ -20,7 +20,6 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         contentView.translatesAutoresizingMaskIntoConstraints = false
         contentView.widthAnchor.constraint(equalToConstant: (UIScreen.main.bounds.size.width - 54) / 2).isActive = true
     }
@@ -64,10 +63,22 @@ class PokemonCollectionViewCell: UICollectionViewCell {
         guard let type = pokemon?.types.first?.type.name else { return }
         DispatchQueue.main.async {
             self.backgroundColor = UIColor().getTypeColor(type: type)
+            
+            for i in 0...(self.tipLabels.count - 1) {
+                self.tipLabels[i].backgroundColor = UIColor().getTypeColor(type: type).darker(by: 10.0)
+            }
         }
-        
     }
     
+//    func selectTypes() {
+//        for i in 0...(tipLabels.count - 1) {
+//            let typeLabel = tipLabels.first { label in
+//                         label.tag == i
+//            }
+//            guard let type = pokemon?.types[i].type.name else {return}
+//            typeLabel?.text = type
+//        }
+//    }
     
     // Altera as caracteristicas da Nib
 //    func customizeNib(with pokemon: Pokemon) {
