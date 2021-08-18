@@ -66,6 +66,12 @@ extension PokedexViewController: UICollectionViewDataSource{
     
         return cell
     }
+	
+	func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+		if let cell = collectionView.cellForItem(at: indexPath) as? PokemonCollectionViewCell {
+			cell.clear()
+		}
+	}
     
     func getData() {
         let urlString = "https://pokeapi.co/api/v2/pokemon?limit=500"
