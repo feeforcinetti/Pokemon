@@ -22,6 +22,9 @@ class PokemonCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         contentView.translatesAutoresizingMaskIntoConstraints = false
         contentView.widthAnchor.constraint(equalToConstant: (UIScreen.main.bounds.size.width - 54) / 2).isActive = true
+        tipLabels.forEach { label in
+            label.text = ""
+        }
     }
     
     static func nib() -> UINib {
@@ -31,6 +34,7 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     func setupPokemon(pokemon: PokemonsResult) {
         alterarNome(nome: pokemon.name)
         getUrl(url: pokemon.url)
+        selectTypes()
     }
     
     func getUrl(url: String?) {
@@ -69,18 +73,29 @@ class PokemonCollectionViewCell: UICollectionViewCell {
             }
         }
     }
+  
     
-//    func selectTypes() {
-//        for i in 0...(tipLabels.count - 1) {
-//            let typeLabel = tipLabels.first { label in
-//                         label.tag == i
-//            }
-//            guard let type = pokemon?.types[i].type.name else {return}
-//            typeLabel?.text = type
-//        }
-//    }
+    func selectTypes() {
+        DispatchQueue.main.async {
+            guard let pokemon = self.pokemon else { return }
+            
+            for i in 0...(self.tipLabels.count - 1) {
+                let typeLabels = self.tipLabels.first {
+                    label in label.tag == i
+                }
+                if !pokemon.types.isEmpty && i <= (pokemon.types.count - 1) {
+                    guard let type = pokemon.types[i].type.name else { return }
+                    typeLabels?.text = type
+                }
+            }
+            self.hideTypes()
+        }
+    }
     
-    // Altera as caracteristicas da Nib
+
+
+
+// Altera as caracteristicas da Nib
 //    func customizeNib(with pokemon: Pokemon) {
 //        for i in 0 ... (pokemon.types.count - 1) {
 //            let typeLabel = tipLabels.first { label in
@@ -99,36 +114,36 @@ class PokemonCollectionViewCell: UICollectionViewCell {
 //        //    }
 //    }
 //
-        // Esconde os labels se não tiverem texto
-        func hideTypes() {
-            for i in 0 ... (tipLabels.count - 1) {
-                if (tipLabels[i].text == "") {
-                    tipLabels[i].isHidden = true
-                } else {
-                    tipLabels[i].isHidden = false
-                }
-            }
+// Esconde os labels se não tiverem texto
+func hideTypes() {
+    for i in 0 ... (tipLabels.count - 1) {
+        if (tipLabels[i].text == "") {
+            tipLabels[i].isHidden = true
+        } else {
+            tipLabels[i].isHidden = false
+        }
+    }
+}
+
+func getDataPokemonModel(urlString: String) {
+    guard let url = URL(string: urlString) else {
+        return
+    }
+    let task = URLSession.shared.dataTask(with: url) { data, _, error in
+        guard let data = data, error == nil else {
+            return
         }
         
-        func getDataPokemonModel(urlString: String) {
-            guard let url = URL(string: urlString) else {
-                return
-            }
-            let task = URLSession.shared.dataTask(with: url) { data, _, error in
-                guard let data = data, error == nil else {
-                    return
-                }
-                
-                do{
-                    let decoder = JSONDecoder() //Criando decodificador
-                    let respostaDaApi = try decoder.decode(Pokemon.self, from: data) // decoficou Json para model
-                    print("Sucess: \(respostaDaApi)")
-                    self.pokemon = respostaDaApi
-                    self.trocarCorFundo()
-                }catch {
-                    print("Erro ao Formatar retorno")
-                }
-            }
-            task.resume()
+        do{
+            let decoder = JSONDecoder() //Criando decodificador
+            let respostaDaApi = try decoder.decode(Pokemon.self, from: data) // decoficou Json para model
+            print("Sucess: \(respostaDaApi)")
+            self.pokemon = respostaDaApi
+            self.trocarCorFundo()
+        }catch {
+            print("Erro ao Formatar retorno")
         }
+    }
+    task.resume()
+}
 }
