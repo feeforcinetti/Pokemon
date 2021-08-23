@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol PokedexViewControllerProtocol {
+    func selectPokemon(pokemon: Pokemon?)
+        
+}
+
 class PokedexViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -43,12 +48,8 @@ extension PokedexViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
-        //Passa dados de uma tela para outra
-        if let viewController = storyboard?.instantiateViewController(identifier: "DetailViewController") as? DetailsController {
-//            viewController.pokemonSelected = customPokemons[indexPath.row]
-            viewController.modalPresentationStyle = .overFullScreen
-            self.present(viewController, animated: true, completion: nil)
-        }
+        let cell = collectionView.cellForItem(at: indexPath) as! PokemonCollectionViewCell
+        selectPokemon(pokemon: cell.pokemon)
     }
 }
 
@@ -59,7 +60,7 @@ extension PokedexViewController: UICollectionViewDataSource{
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PokemonCollectionViewCell.identifier , for: indexPath) as! PokemonCollectionViewCell
-        
+        cell.delegate = self
         cell.index = indexPath.row
         cell.setupPokemon(pokemon: pokemons[indexPath.row])
         cell.downloadImage()
@@ -96,5 +97,14 @@ extension PokedexViewController: UICollectionViewDataSource{
     }
 }
 
+extension PokedexViewController: PokedexViewControllerProtocol {
+    func selectPokemon(pokemon: Pokemon?) {
+        if let viewController = storyboard?.instantiateViewController(identifier: "DetailViewController") as? DetailsController {
+            viewController.pokemonSelected = pokemon
+            viewController.modalPresentationStyle = .overFullScreen
+            self.present(viewController, animated: true, completion: nil)
+        }
+    }
+}
 
 

@@ -132,7 +132,7 @@
                 <outletCollection property="tipLabels" destination="gRi-xL-bVZ" collectionClass="NSMutableArray" id="tm7-O0-jUK"/>
                 <outletCollection property="tipLabels" destination="WzY-CQ-ebe" collectionClass="NSMutableArray" id="nkB-YS-iFb"/>
             </connections>
-            <point key="canvasLocation" x="-191.30434782608697" y="8.3705357142857135"/>
+            <point key="canvasLocation" x="-265" y="3"/>
         </collectionViewCell>
     </objects>
     <resources>

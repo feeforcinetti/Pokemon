@@ -127,7 +127,7 @@
                 <outletCollection property="TipsPower" destination="45S-D7-9B9" collectionClass="NSMutableArray" id="xBI-e9-2ov"/>
                 <outletCollection property="TipsPower" destination="cQX-9a-m67" collectionClass="NSMutableArray" id="oBn-oK-r4w"/>
             </connections>
-            <point key="canvasLocation" x="110.86956521739131" y="124.21875"/>
+            <point key="canvasLocation" x="246" y="71"/>
         </tableViewCell>
     </objects>
     <resources>

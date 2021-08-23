@@ -7,6 +7,7 @@
 
 import UIKit
 import WMSegmentControl
+import Kingfisher
 
 class DetailsController: UIViewController {
     
@@ -34,14 +35,14 @@ class DetailsController: UIViewController {
     @IBOutlet weak var weaknessesCollectionView: UICollectionView!
     
     //variaveis
-    var pokemonSelected: Pokemon1?
-    
-
+    var pokemonSelected: Pokemon?
+     
     //funcoes de ciclo de vida
     
     override func viewDidLoad() {
         setupSegmented()
         weaknessesCollectionView.register(WeaknessesCollectionViewCell.nib(), forCellWithReuseIdentifier: WeaknessesCollectionViewCell.weakIndetifier)
+        
         if let flowLayout = weaknessesCollectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         }
@@ -49,6 +50,7 @@ class DetailsController: UIViewController {
         EvolutionTableView.register(EvolutionTableViewCell.nib(), forCellReuseIdentifier: EvolutionTableViewCell.identifier)
         changeScreen()
         changeAboutInfo()
+        
     }
     
     // funcoes proprias
@@ -61,6 +63,35 @@ class DetailsController: UIViewController {
         segmentedControl.bottomBarHeight = 2
     }
     
+    func downloadImage(_ id: Int) {
+        
+        var numberString = String(id)
+        
+        if (id >= 1) && (id < 10){
+            numberString = "00" + numberString
+        }else if (id >= 10) && (id < 100) {
+            numberString = "0" + numberString
+        }
+        numberLb.text = "#" + numberString
+        
+        let url = URL(string: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/\(numberString).png")
+        pokeImage.kf.setImage(with: url)
+    }
+    
+    func trocarCorFundo(_ pokemon: Pokemon) {
+        guard let type = pokemon.types.first?.type.name else { return }
+        DispatchQueue.main.async {
+            self.background.backgroundColor = UIColor().getTypeColor(type: type)
+            
+            for i in 0...(self.typesLb.count - 1) {
+                self.typesLb[i].backgroundColor = UIColor().getTypeColor(type: type).darker(by: 10.0)
+            }
+        }
+    }
+    
+    func alterarNome(nome: String?) {
+        nameLb.text = nome?.capitalized
+    }
     //ibaction
   
         @IBAction func detailsPokemon(_ sender: WMSegment) {
@@ -80,41 +111,59 @@ class DetailsController: UIViewController {
         }
     
     func changeScreen() {
-//        nameLb.text = pokemonSelected?.pokeName
-//        numberLb.text = pokemonSelected?.pokeNumber
-//        pokeImage.image = pokemonSelected?.pokeImage
-//        background.backgroundColor = pokemonSelected?.pokeBack
         
-        guard let pokemon = pokemonSelected else {
-            return
-        }
-        for i in 0 ... (pokemon.types.count - 1) {
-            let typeLabel = typesLb.first { label in
-                label.tag == i
-            }
+//        background.backgroundColor = pokemonSelected?.pokeBack
+    }
+        
+//        guard let pokemon = pokemonSelected else {
+//            return
+////        }
+//        for i in 0 ... (pokemon.types.count - 1) {
+//            let typeLabel = typesLb.first { label in
+//                label.tag == i
+//            }
 //            typeLabel?.backgroundColor = pokemonSelected?.typeColors[i]
 //            typeLabel?.text = pokemonSelected?.types[i]
-        }
-        hideTypes()
+//        }
+//        hideTypes()
+//    }
+//
+////    func hideTypes() {
+//        for i in 0 ... (typesLb.count - 1) {
+//            if (typesLb[i].text == "") {
+//                typesLb[i].isHidden = true
+//            } else {
+//                typesLb[i].isHidden = false
+//            }
+//        }
+//    }
+    
+    func changeAboutInfo() {
+        guard let pokemonSelected = pokemonSelected else { return }
+        downloadImage(pokemonSelected.id ?? 0)
+        trocarCorFundo(pokemonSelected)
+        alterarNome(nome: pokemonSelected.name )
+        heightLb.text = String(pokemonSelected.height ?? 0) + " m"
+        weightLb.text = String(pokemonSelected.weight ?? 0)
+        movesLb.text = selectMoves(pokemonSelected.moves)
+        abilitiesLb.text = selectAbilities(pokemonSelected.abilities)
+//      descriptionLb.text = pokemonSelected?.about?.description
     }
     
-    func hideTypes() {
-        for i in 0 ... (typesLb.count - 1) {
-            if (typesLb[i].text == "") {
-                typesLb[i].isHidden = true
-            } else {
-                typesLb[i].isHidden = false
-            }
+    func selectMoves(_ moves: [Moves]) -> String {
+        var text = ""
+        moves.forEach { move in
+            text += (move.move?.name ?? "") + ", "
         }
+        return text
     }
-
-    func changeAboutInfo(){
-//        heightLb.text = pokemonSelected?.about?.height
-//        weightLb.text = pokemonSelected?.about?.weight
-//        movesLb.text = pokemonSelected?.about?.gender
-//        abilitiesLb.text = pokemonSelected?.about?.category
-//        descriptionLb.text = pokemonSelected?.about?.description
+    
+    func selectAbilities(_ abilities: [Abilities]) -> String {
+        var abilitys = ""
+        abilities.forEach { abilities in
+            abilitys += (abilities.ability?.name ?? "") + " ,"
+        }
+        return abilitys
     }
 }
-
 

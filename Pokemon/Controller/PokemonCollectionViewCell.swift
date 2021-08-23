@@ -14,6 +14,9 @@ class PokemonCollectionViewCell: UICollectionViewCell {
 	@IBOutlet weak var pokemonImage: UIImageView!
 	@IBOutlet var tipLabels: [UILabel]!
 	
+    var delegate: PokedexViewControllerProtocol?
+    var pokemon: Pokemon?
+    
 	static let identifier = "PokemonCollectionViewCell"
 	var index = 0
 	
@@ -47,7 +50,6 @@ class PokemonCollectionViewCell: UICollectionViewCell {
 		}
 		backgroundColor = .clear
 		pokemonImage.image = nil
-		
 	}
 	
 	func downloadImage() {
@@ -70,6 +72,7 @@ class PokemonCollectionViewCell: UICollectionViewCell {
 	func setupCard(_ pokemon: Pokemon) {
 		trocarCorFundo(pokemon)
 		selectTypes(pokemon)
+        self.pokemon = pokemon
 	}
 	
 	func trocarCorFundo(_ pokemon: Pokemon) {
