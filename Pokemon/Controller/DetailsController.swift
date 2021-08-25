@@ -48,7 +48,6 @@ class DetailsController: UIViewController {
         }
         
         EvolutionTableView.register(EvolutionTableViewCell.nib(), forCellReuseIdentifier: EvolutionTableViewCell.identifier)
-        changeScreen()
         changeAboutInfo()
         
     }
@@ -92,6 +91,22 @@ class DetailsController: UIViewController {
     func alterarNome(nome: String?) {
         nameLb.text = nome?.capitalized
     }
+    
+    func selectMoves(_ moves: [Moves]) -> String {
+        var text = ""
+        moves.forEach { move in
+            text += (move.move?.name ?? "") + ", "
+        }
+        return text
+    }
+    
+    func selectAbilities(_ abilities: [Abilities]) -> String {
+        var abilitys = ""
+        abilities.forEach { abilities in
+            abilitys += (abilities.ability?.name ?? "") + " ,"
+        }
+        return abilitys
+    }
     //ibaction
   
         @IBAction func detailsPokemon(_ sender: WMSegment) {
@@ -110,14 +125,19 @@ class DetailsController: UIViewController {
             }
         }
     
-    func changeScreen() {
-        
-//        background.backgroundColor = pokemonSelected?.pokeBack
+    func selectTypes(_ pokemon: Pokemon) {
+        for i in 0...(typesLb.count - 1){
+            let typeLb = self.typesLb.first {
+                label in label.tag == i
+            }
+            if !pokemon.types.isEmpty && i <= (pokemon.types.count - 1) {
+                guard let type = pokemon.types[i].type.name else { return }
+                typeLb?.text = type
+            }
+        }
+        self.hideTypes()
     }
         
-//        guard let pokemon = pokemonSelected else {
-//            return
-////        }
 //        for i in 0 ... (pokemon.types.count - 1) {
 //            let typeLabel = typesLb.first { label in
 //                label.tag == i
@@ -128,42 +148,27 @@ class DetailsController: UIViewController {
 //        hideTypes()
 //    }
 //
-////    func hideTypes() {
-//        for i in 0 ... (typesLb.count - 1) {
-//            if (typesLb[i].text == "") {
-//                typesLb[i].isHidden = true
-//            } else {
-//                typesLb[i].isHidden = false
-//            }
-//        }
-//    }
+    func hideTypes() {
+        for i in 0 ... (typesLb.count - 1) {
+            if (typesLb[i].text == "") {
+                typesLb[i].isHidden = true
+            } else {
+                typesLb[i].isHidden = false
+            }
+        }
+    }
     
     func changeAboutInfo() {
         guard let pokemonSelected = pokemonSelected else { return }
+        selectTypes(pokemonSelected)
         downloadImage(pokemonSelected.id ?? 0)
         trocarCorFundo(pokemonSelected)
         alterarNome(nome: pokemonSelected.name )
         heightLb.text = String(pokemonSelected.height ?? 0) + " m"
         weightLb.text = String(pokemonSelected.weight ?? 0)
-        movesLb.text = selectMoves(pokemonSelected.moves)
-        abilitiesLb.text = selectAbilities(pokemonSelected.abilities)
+        movesLb.text = selectMoves(pokemonSelected.moves).capitalized
+        abilitiesLb.text = selectAbilities(pokemonSelected.abilities).capitalized
 //      descriptionLb.text = pokemonSelected?.about?.description
-    }
-    
-    func selectMoves(_ moves: [Moves]) -> String {
-        var text = ""
-        moves.forEach { move in
-            text += (move.move?.name ?? "") + ", "
-        }
-        return text
-    }
-    
-    func selectAbilities(_ abilities: [Abilities]) -> String {
-        var abilitys = ""
-        abilities.forEach { abilities in
-            abilitys += (abilities.ability?.name ?? "") + " ,"
-        }
-        return abilitys
     }
 }
 
