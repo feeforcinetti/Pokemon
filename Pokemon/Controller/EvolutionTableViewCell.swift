@@ -55,5 +55,7 @@ class EvolutionTableViewCell: UITableViewCell {
             }
         }
     }
+    
+    
 
 }

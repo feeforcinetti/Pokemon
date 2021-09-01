@@ -168,7 +168,49 @@ class DetailsController: UIViewController {
         weightLb.text = String(pokemonSelected.weight ?? 0)
         movesLb.text = selectMoves(pokemonSelected.moves).capitalized
         abilitiesLb.text = selectAbilities(pokemonSelected.abilities).capitalized
-//      descriptionLb.text = pokemonSelected?.about?.description
+//        descriptionLb.text =
+        getDataPokemonSpecies()
+    }
+    
+    func getDataPokemonSpecies() {
+        guard let pokemon = pokemonSelected else {return}
+        let urlString = "https://pokeapi.co/api/v2/pokemon-species/\(pokemon.id ?? 0)"
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        let task = URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            
+            do{
+                // retorno da api deu sucesso!!!
+                let decoder = JSONDecoder()
+                let respostaDaApi = try decoder.decode(PokemonSpecies.self, from: data)
+                print("Sucess: \(respostaDaApi)")
+                // chamando a funcao da segunda chamada
+                self.getDataEvolution(urlEvol: respostaDaApi.evolutionChain.url)
+            }catch {
+                print("Erro ao Formatar retorno")
+            }
+        }
+        task.resume()
+    }
+    
+    // declarar via parametro semppre na declaracao da funcao:
+    func getDataEvolution(urlEvol: String?) {
+        guard let url = URL(string: urlEvol ?? "") else {return}
+        let task = URLSession.shared.dataTask(with: url) {data, _, error in
+            guard let data = data, error == nil else {return}
+            do {
+                let decoder = JSONDecoder()
+                let reponseApi = try decoder.decode(EvolutionChainResponse.self, from: data)
+                print("Sucess: \(reponseApi)")
+            }catch {
+                print("Error API")
+            }
+        }
+        task.resume()
     }
 }
 

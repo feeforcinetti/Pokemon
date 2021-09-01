@@ -53,3 +53,5 @@ struct Type: Codable {
     var url: String?
 }
 
+
+

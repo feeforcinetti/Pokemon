@@ -16,11 +16,9 @@ extension DetailsController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let evolutionCell = EvolutionTableView.dequeueReusableCell(withIdentifier: EvolutionTableViewCell.identifier , for: indexPath) as! EvolutionTableViewCell
         
-//        evolutionCell.evolution = pokemonSelected?.evolution[indexPath.row]
+
         evolutionCell.setupTableViewEvolution()
-        
-        
+              
         return evolutionCell
-        
     }
 }
