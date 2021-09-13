@@ -17,8 +17,10 @@ extension DetailsController: UITableViewDelegate, UITableViewDataSource {
         let evolutionCell = EvolutionTableView.dequeueReusableCell(withIdentifier: EvolutionTableViewCell.identifier , for: indexPath) as! EvolutionTableViewCell
         
 
-        evolutionCell.setupTableViewEvolution()
+        evolutionCell.trocarCorFundo(pokemonSelected!)
+        
               
         return evolutionCell
     }
+    
 }

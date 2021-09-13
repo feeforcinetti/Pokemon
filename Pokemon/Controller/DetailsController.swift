@@ -11,6 +11,7 @@ import Kingfisher
 
 class DetailsController: UIViewController {
     
+    
     // MARK: - OutletsVc
     @IBOutlet weak var nameLb: UILabel!
     @IBOutlet var typesLb: [UILabel]!
@@ -107,6 +108,19 @@ class DetailsController: UIViewController {
         }
         return abilitys
     }
+    
+    func selectTypes(_ pokemon: Pokemon) {
+        for i in 0...(typesLb.count - 1){
+            let typeLb = self.typesLb.first {
+                label in label.tag == i
+            }
+            if !pokemon.types.isEmpty && i <= (pokemon.types.count - 1) {
+                guard let type = pokemon.types[i].type.name else { return }
+                typeLb?.text = type
+            }
+        }
+        self.hideTypes()
+    }
     //ibaction
   
         @IBAction func detailsPokemon(_ sender: WMSegment) {
@@ -125,29 +139,6 @@ class DetailsController: UIViewController {
             }
         }
     
-    func selectTypes(_ pokemon: Pokemon) {
-        for i in 0...(typesLb.count - 1){
-            let typeLb = self.typesLb.first {
-                label in label.tag == i
-            }
-            if !pokemon.types.isEmpty && i <= (pokemon.types.count - 1) {
-                guard let type = pokemon.types[i].type.name else { return }
-                typeLb?.text = type
-            }
-        }
-        self.hideTypes()
-    }
-        
-//        for i in 0 ... (pokemon.types.count - 1) {
-//            let typeLabel = typesLb.first { label in
-//                label.tag == i
-//            }
-//            typeLabel?.backgroundColor = pokemonSelected?.typeColors[i]
-//            typeLabel?.text = pokemonSelected?.types[i]
-//        }
-//        hideTypes()
-//    }
-//
     func hideTypes() {
         for i in 0 ... (typesLb.count - 1) {
             if (typesLb[i].text == "") {

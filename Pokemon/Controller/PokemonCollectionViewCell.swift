@@ -101,26 +101,6 @@ class PokemonCollectionViewCell: UICollectionViewCell {
 		}
 	}
 
-	// Altera as caracteristicas da Nib
-	//    func customizeNib(with pokemon: Pokemon) {
-	//        for i in 0 ... (pokemon.types.count - 1) {
-	//            let typeLabel = tipLabels.first { label in
-	//                label.tag == i
-	//            }
-	//            typeLabel?.text = pokemon.types[i].name
-	//        }
-	//        //        for i in 0 ... (pokemon.types.count - 1) {
-	//        //            let typeLabel = tipLabels.first { label in
-	//        //                label.tag == i
-	//        //            }
-	//        ////            typeLabel?.backgroundColor = pokemon.typeColors[i]
-	//        //            typeLabel?.text = pokemon.types[i]
-	//        //        }
-	//        //        hideTypes()
-	//        //    }
-	//    }
-	//
-	// Esconde os labels se não tiverem texto
 	func hideTypes() {
 		for i in 0 ... (tipLabels.count - 1) {
 			if (tipLabels[i].text == "") {
